@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tag color change</title>
+</head>
+<body>
+    <div>
+        <ul class="menu" id="menu1">
+            <li>menu-1</li>
+            <li>menu-2</li>
+            <li>menu-3</li>
+            <li>menu-4</li>
+            <li>menu-5</li>
+        </ul>
+        <ul class="menu" id="menu2">
+            <li>menu-1</li>
+            <li>menu-2</li>
+            <li>menu-3</li>
+            <li>menu-4</li>
+            <li>menu-5</li>
+        </ul>
+    </div>
+    <script>
+        window.onload = function() {
+            var menu2 = document.getElementById("menu2");
+            var liList = menu2.getElementByTagName("li");
+            for (var i = 0; i < liList.length; i++) {
+                var li = liList[i];
+                li.style.color = "blue";
+            }
+        }
+    </script>
+</body>
+</html>
